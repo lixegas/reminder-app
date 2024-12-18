@@ -1,0 +1,23 @@
+server:
+  port:
+
+spring:
+  profiles:
+    active:
+
+    datasource:
+      url:
+      driverClassName:
+      initialization-mode:
+      continue-on-error:
+
+    jpa:
+      hibernate:
+        ddl-auto:
+        show-sql:
+      database-platform:
+
+    data:
+      jpa:
+        repositories:
+          enabled:
