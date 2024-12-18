@@ -33,4 +33,7 @@ build/
 .vscode/
 
 ### Dev ###
-application-dev.yaml
+src/main/resources/application-dev.yaml
+src/main/resources/reminder.db
+src/main/resources/application-dev.yaml
+src/main/resources/application.yaml
