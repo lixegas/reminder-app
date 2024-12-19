@@ -2,22 +2,36 @@ server:
   port:
 
 spring:
-  profiles:
-    active:
+  datasource:
+    url:
+    driverClassName:
+    initialization-mode:
+    continue-on-error:
 
-    datasource:
-      url:
-      driverClassName:
-      initialization-mode:
-      continue-on-error:
-
-    jpa:
+  jpa:
+    hibernate:
+      ddl-auto:
+      show-sql:
+    database-platform:
+    properties:
       hibernate:
-        ddl-auto:
-        show-sql:
-      database-platform:
+        format_sql:
+  data:
+    jpa:
+      repositories:
+        enabled:
 
-    data:
-      jpa:
-        repositories:
-          enabled:
+  mail:
+    host:
+    port:
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth:
+          starttls:
+            enable:
+          connectiontimeout:
+          timeout:
+          writetimeout: 

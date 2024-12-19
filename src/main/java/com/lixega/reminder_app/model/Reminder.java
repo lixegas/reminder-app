@@ -1,6 +1,6 @@
 package com.lixega.reminder_app.model;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,9 +11,16 @@ import lombok.NoArgsConstructor;
 @Data
 public class Reminder {
 
-    private Integer id;
-    private String mail;
-    private String message;
-    private type status;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
+    @Column(nullable = false)
+    private String mail;
+
+    @Column(nullable = false)
+    private String message;
+
+    @Column(nullable = false)
+    private Status status;
 }
